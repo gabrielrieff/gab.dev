@@ -37,7 +37,9 @@ export function Skill() {
           key={index}
           className="text-white flex flex-col items-center gap-2"
         >
-          <div className="bg-[#140C1C] p-4 rounded-lg">{item.ico}</div>
+          <div className="bg-[#140C1C] hover:bg-[#2a1454] hover:border-[#8750f7] hover:border hover:p-[15px] p-4 rounded-lg">
+            {item.ico}
+          </div>
           <span className="font-semibold">{item.skill}</span>
         </div>
       ))}
