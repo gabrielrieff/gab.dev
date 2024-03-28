@@ -31,7 +31,10 @@ export function Skill() {
     { ico: <FaFigma size={60} className="text-[#9D56F7]" />, skill: "Figma" },
   ];
   return (
-    <section className="flex items-center justify-center flex-row flex-wrap gap-10 mt-11 max-w-[1220px] p-2">
+    <section
+      className="flex items-center justify-center flex-row flex-wrap gap-10 mt-11 max-w-[1220px] p-2"
+      id="habilidades"
+    >
       {listSkill.map((item, index) => (
         <div
           key={index}

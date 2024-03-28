@@ -8,9 +8,13 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
   CarouselPrevious,
 } from "./ui/carousel";
+
+interface TecProps {
+  tec: string;
+  color: string;
+}
 
 interface ProjecPros {
   name: string;
@@ -19,10 +23,10 @@ interface ProjecPros {
   Links: string[];
   descriptionBrief: string;
   descriptionMain: string;
-  technologies: string[];
+  technologies: Array<TecProps>;
 }
 
-export function Project(item: ProjecPros) {
+export function DialogProjects(item: ProjecPros) {
   return (
     <DialogContent className="max-w-[1200px] p-0 border-0">
       <div className="h-[800px] overflow-y-scroll scroll scroll-hidden">
@@ -91,9 +95,9 @@ export function Project(item: ProjecPros) {
               {item.technologies.map((technique, index) => (
                 <span
                   key={index}
-                  className="px-3 py-2 font-semibold border-purple-800 border bg-purple-200 rounded-2xl"
+                  className={`px-3 py-2 font-semibold bg-opacity-25 ${technique.color} border rounded-2xl`}
                 >
-                  {technique}
+                  {technique.tec}
                 </span>
               ))}
             </div>

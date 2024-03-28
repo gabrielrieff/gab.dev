@@ -1,7 +1,7 @@
 "use client";
 
 import { About } from "~/components/About";
-import { CarouselProject } from "~/components/Carousel";
+import { Projects } from "~/components/Projects";
 import { Header } from "~/components/Header";
 import { Skill } from "~/components/Skill";
 
@@ -37,7 +37,7 @@ export default function Home() {
 
       <Skill />
 
-      <CarouselProject />
+      <Projects />
     </main>
   );
 }

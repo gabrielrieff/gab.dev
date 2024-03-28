@@ -78,3 +78,16 @@
 .scroll-hidden::-webkit-scrollbar {
   width: 0; /* Esconde a barra de rolagem */
 }
+
+.bg-firebase {
+  background-color: rgba(247, 198, 48, 0.3);
+  border: 1px solid #f7c630;
+}
+.bg-next {
+  background-color: rgba(100, 98, 99, 0.3);
+  border: 1px solid #646263;
+}
+.bg-react {
+  background-color: rgba(0, 198, 247, 0.3);
+  border: 1px solid #00c6f7;
+}

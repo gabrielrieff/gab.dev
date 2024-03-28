@@ -13,11 +13,11 @@ export function Header() {
         <Link href={"#sobre"} className="hover:text-purple-400">
           Sobre
         </Link>
-        <Link href={"#projetos"} className="hover:text-purple-400">
-          Projetos
-        </Link>
         <Link href={"#habilidades"} className="hover:text-purple-400">
           Habilidades
+        </Link>
+        <Link href={"#projetos"} className="hover:text-purple-400">
+          Projetos
         </Link>
       </section>
 
