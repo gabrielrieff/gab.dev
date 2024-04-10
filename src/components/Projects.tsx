@@ -2,6 +2,7 @@ import Image from "next/image";
 import { GoArrowUpRight } from "react-icons/go";
 import { Dialog, DialogTrigger } from "./ui/dialog";
 import { DialogProjects } from "./DialogProjects";
+import { motion } from "framer-motion";
 
 export function Projects() {
   return (
@@ -15,7 +16,9 @@ export function Projects() {
 
       <div className="flex flex-wrap justify-center gap-5">
         {projects.map((item, index) => (
-          <div
+          <motion.div
+            whileHover={{ scale: [null, 1.1, 1.05] }}
+            transition={{ duration: 0.3 }}
             key={index}
             className="w-[540px] h-[370px] xl:w-[490px] lg:w-[400px] lg:h-[320px] sm:w-[380px] sm:h-[250px]
              bg-[#190C26] border-[1px] border-[#2f1747] text-white group 
@@ -41,12 +44,16 @@ export function Projects() {
               </div>
               <Dialog>
                 <DialogTrigger asChild>
-                  <button>
+                  <motion.button
+                    initial={{ rotate: 180 }}
+                    whileHover={{ rotate: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
                     <GoArrowUpRight
                       size={50}
-                      className="rotate-180 hover:rotate-0 hover:text-zinc-400 transition-[1s]"
+                      className="hover:text-zinc-400 transition-[1s]"
                     />
-                  </button>
+                  </motion.button>
                 </DialogTrigger>
                 <DialogProjects
                   descriptionBrief={item.descriptionBrief}
@@ -59,7 +66,7 @@ export function Projects() {
                 />
               </Dialog>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
@@ -67,6 +74,39 @@ export function Projects() {
 }
 
 const projects = [
+  {
+    name: "Image-schema",
+    imageMain: "/image-schema.png",
+    imagesList: [
+      "/image-schema.png",
+      "/image-schema.png",
+      "/image-schema.png",
+      "/image-schema.png",
+    ],
+    Links: [
+      "https://github.com/gabrielrieff/imagens-schema",
+      "https://imagens-schema.vercel.app/",
+    ],
+
+    descriptionBrief: `Projeto criado para ser algo parecido com o pintrest`,
+    descriptionMain: `
+    O image-schema é um projeto que de certa forma é uma abstração do pintrest, criei ele com o objetivo desenvolver 
+    minhas habilidades como desenvolvedor, mas de uma maneira bem mais enxuta e simples.
+
+    Vou citar algumas funcionalidades mais básicas, como, por exemplo, criar usuários, fazer login, salvar imagens 
+    com título de descrição e listar as imagens salvas de forma aberta, dentre outras de uso mais interno do projeto.
+
+    As tecnologias usadas foram ReactJS e Firebase, mas foi usado outras bibliotecas para auxiliar no desenvolvimento, 
+    como, por exemplo, React hook forms, tailwind, entre outras.
+
+    O projeto já está disponível para uso do público, mas está restrito a criação de usuários, pois ainda não existe uma 
+    validação das imagens que o usuário tenta salvar, e ainda existem alguns pontos de melhoria e novas funcionalidades a desenvolver.`,
+    technologies: [
+      { tec: "React", color: "bg-react" },
+      { tec: "Firebase", color: "bg-firebase" },
+      { tec: "NextJS", color: "bg-next" },
+    ],
+  },
   {
     name: "Image-schema",
     imageMain: "/image-schema.png",

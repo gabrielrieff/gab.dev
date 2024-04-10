@@ -1,9 +1,15 @@
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 export function Header() {
   return (
-    <header className="flex items-center gap-10 mt-4 max-w-[1220px]">
+    <motion.header
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="flex items-center gap-10 mt-4 max-w-[1220px]"
+    >
       <Link href={"/"} className="font-semibold text-4xl">
         <span className="text-white">Gab</span>
         <span className="text-[#A530ED]">.dev</span>
@@ -32,6 +38,6 @@ export function Header() {
           <BsLinkedin size={30} className="text-white hover:text-purple-400" />
         </Link>
       </section>
-    </header>
+    </motion.header>
   );
 }
