@@ -63,7 +63,7 @@ export function DialogProjects(item: ProjecPros) {
               </div>
             </div>
 
-            <Carousel
+            {/* <Carousel
               opts={{
                 align: "start",
               }}
@@ -83,7 +83,7 @@ export function DialogProjects(item: ProjecPros) {
                 ))}
               </CarouselContent>
               <CarouselPrevious />
-            </Carousel>
+            </Carousel> */}
 
             <div className="mt-11 flex flex-col gap-4">
               <h2 className="text-3xl font-semibold">Descrição do projeto</h2>

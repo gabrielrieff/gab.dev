@@ -10,15 +10,33 @@ export function Projects() {
       className="my-14 max-w-[1200px] flex flex-col items-center gap-16 sm:p-2"
       id="projetos"
     >
-      <h2 className="text-5xl sm:text-3xl p-2 font-bold bg-gradient-to-r from-[#A530ED] to-[#E6C8F1] bg-clip-text text-transparent">
-        Mais recentes projetos
-      </h2>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        <h2 className="text-5xl sm:text-3xl p-2 font-bold bg-gradient-to-r from-[#A530ED] to-[#E6C8F1] bg-clip-text text-transparent">
+          Mais recentes projetos
+        </h2>
+      </motion.div>
 
       <div className="flex flex-wrap justify-center gap-5">
         {projects.map((item, index) => (
           <motion.div
+            initial={
+              index / 2 === 0
+                ? { x: -200, opacity: 0 }
+                : { x: +200, opacity: 0 }
+            }
+            whileInView={{ x: 0, opacity: 1 }}
+            exit={
+              index / 2 === 0
+                ? { x: -200, opacity: 0 }
+                : { x: +200, opacity: 0 }
+            }
             whileHover={{ scale: [null, 1.1, 1.05] }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.5 }}
             key={index}
             className="w-[540px] h-[370px] xl:w-[490px] lg:w-[400px] lg:h-[320px] sm:w-[380px] sm:h-[250px]
              bg-[#190C26] border-[1px] border-[#2f1747] text-white group 
