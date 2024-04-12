@@ -29,7 +29,7 @@ interface ProjecPros {
 
 export function DialogProjects(item: ProjecPros) {
   return (
-    <DialogContent className="max-w-[1200px] p-0 border-0">
+    <DialogContent className="max-w-[1200px] sm:w-[480px] p-0 border-0">
       <div className="h-[800px] overflow-y-scroll scroll scroll-hidden">
         <div className="bg-[#35098A] pt-14 flex justify-center">
           <Image alt="name" src={item.imageMain} width={1100} height={900} />
