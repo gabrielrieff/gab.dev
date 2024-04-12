@@ -11,7 +11,7 @@ export function Header() {
       className="flex items-center gap-10 mt-4 max-w-[1220px]"
     >
       <Link href={"/"} className="font-semibold text-4xl">
-        <span className="text-white">Gab</span>
+        <span className="text-white">gab</span>
         <span className="text-[#A530ED]">.dev</span>
       </Link>
 
