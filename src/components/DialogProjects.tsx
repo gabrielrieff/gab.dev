@@ -4,13 +4,6 @@ import { DialogContent } from "./ui/dialog";
 import { FaGithub } from "react-icons/fa";
 import { AiOutlineGlobal } from "react-icons/ai";
 import Link from "next/link";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-} from "./ui/carousel";
-import { motion } from "framer-motion";
 
 interface TecProps {
   tec: string;
@@ -56,28 +49,6 @@ export function DialogProjects(item: ProjecPros) {
               </Link>
             </div>
           </div>
-
-          {/* <Carousel
-              opts={{
-                align: "start",
-              }}
-              className="flex max-w-[1200px] overflow-x-scroll scroll scroll-hidden mt-10"
-            >
-              <CarouselContent className="cursor-grab">
-                {item.imagesList.map((img, index) => (
-                  <CarouselItem key={index} className="max-w-[400px]">
-                    <Image
-                      key={index}
-                      alt="a"
-                      src={img}
-                      width={400}
-                      height={200}
-                    />
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-            </Carousel> */}
 
           <div className="mt-11 flex flex-col gap-4">
             <h2 className="text-3xl font-semibold">Descrição do projeto</h2>

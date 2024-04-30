@@ -3,6 +3,7 @@ import { GoArrowUpRight } from "react-icons/go";
 import { Dialog, DialogTrigger } from "./ui/dialog";
 import { DialogProjects } from "./DialogProjects";
 import { motion } from "framer-motion";
+import { data } from "~/app/service/db";
 
 export function Projects() {
   return (
@@ -22,7 +23,7 @@ export function Projects() {
       </motion.div>
 
       <div className="flex flex-wrap justify-center gap-5">
-        {projects.map((item, index) => (
+        {data.map((item, index) => (
           <motion.div
             initial={
               index / 2 === 0
@@ -90,39 +91,3 @@ export function Projects() {
     </section>
   );
 }
-
-const projects = [
-  {
-    name: "Image-schema",
-    imageMain: "/image-schema.png",
-    imagesList: [
-      "/image-schema.png",
-      "/image-schema.png",
-      "/image-schema.png",
-      "/image-schema.png",
-    ],
-    Links: [
-      "https://github.com/gabrielrieff/imagens-schema",
-      "https://imagens-schema.vercel.app/",
-    ],
-
-    descriptionBrief: `Projeto criado para ser algo parecido com o pintrest`,
-    descriptionMain: `
-    O image-schema é um projeto que de certa forma é uma abstração do pintrest, criei ele com o objetivo desenvolver 
-    minhas habilidades como desenvolvedor, mas de uma maneira bem mais enxuta e simples.
-
-    Vou citar algumas funcionalidades mais básicas, como, por exemplo, criar usuários, fazer login, salvar imagens 
-    com título de descrição e listar as imagens salvas de forma aberta, dentre outras de uso mais interno do projeto.
-
-    As tecnologias usadas foram ReactJS e Firebase, mas foi usado outras bibliotecas para auxiliar no desenvolvimento, 
-    como, por exemplo, React hook forms, tailwind, entre outras.
-
-    O projeto já está disponível para uso do público, mas está restrito a criação de usuários, pois ainda não existe uma 
-    validação das imagens que o usuário tenta salvar, e ainda existem alguns pontos de melhoria e novas funcionalidades a desenvolver.`,
-    technologies: [
-      { tec: "React", color: "bg-react" },
-      { tec: "Firebase", color: "bg-firebase" },
-      { tec: "NextJS", color: "bg-next" },
-    ],
-  },
-];
