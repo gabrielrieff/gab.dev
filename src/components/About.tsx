@@ -1,5 +1,5 @@
-import { Card } from "./Card";
 import { motion } from "framer-motion";
+import { Softskill } from "./Card";
 
 export function About() {
   return (
@@ -17,18 +17,18 @@ export function About() {
           className="flex items-center flex-col gap-10 mt-44 md:mt-32 max-w-[1220px] p-2"
           id="sobre"
         >
-          <div className="text-white">
+          <div>
             <span className="text-2xl lg:text-xl md:text-lg sm:text-base font-bold">
               Olá, meu nome é Gabriel
             </span>
             <h1
-              className="text-[96px] lg:text-[76px] md:text-[56px] sm:text-[36px] 
-        font-bold bg-gradient-to-r from-[#A530ED] to-[#E6C8F1] bg-clip-text text-transparent"
+              className="text-[90px] lg:text-[76px] md:text-[56px] sm:text-[36px] 
+        font-bold bg-gradient-to-r from-purple-800 to-purple-400 bg-clip-text text-transparent"
             >
-              Sou desenvolvedor.
+              desenvolvedor full stack.
             </h1>
             <span className="text-3xl lg:text-2xl md:text-xl sm:text-sm font-light">
-              Trabalho com desenvolvimento de software web full stack.
+              Trabalho com desenvolvimento de software web.
             </span>
           </div>
 
@@ -37,18 +37,23 @@ export function About() {
               Um pouco sobre mim
             </h2>
 
-            <p className="font-light text-white">
-              Sou um desenvolvedor que ama resolver problemas e buscar por
-              melhorias por meio de software. Experiente em desenvolvimento web,
-              com foco principal em front-end, mas tenho experiencia com
-              back-end. Uma pessoa que trabalha muito bem em grupo, consistente
-              e sempre aberto a mudanças. Buscando por uma nova oportunidade de
-              agregar valor e aprender muito.
+            <p className="font-light w-full text-left">
+              Profissional atuando no mercado há 2 anos na área de
+              desenvolvimento de software, trabalhando em equipe e resolvendo
+              problemas.
+            </p>
+            <p className="font-light w-full text-left">
+              Desenvolvedor full stack, atualmente com conhecimento maior no
+              desenvolvimento front-end utilizando html, css, typescript,
+              reactjs, nextjs, e com menor experiência no back-end, utilizando
+              nodejs, typescript e postgreSQL, porém, estudando para aperfeiçoar
+              meus conhecimentos e adquirir maior experiência na área, buscando
+              crescimento para me tornar um profissional completo.
             </p>
           </div>
         </section>
       </motion.div>
-      <Card />
+      <Softskill />
     </>
   );
 }

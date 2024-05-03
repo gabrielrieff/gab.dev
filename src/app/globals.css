@@ -91,3 +91,34 @@
   background-color: rgba(0, 198, 247, 0.3);
   border: 1px solid #00c6f7;
 }
+.bg-node {
+  background-color: rgba(127, 199, 40, 0.3);
+  border: 1px solid #7fc728;
+}
+.bg-tailwind {
+  background-color: rgba(6, 176, 205, 0.3);
+  border: 1px solid #06b0cd;
+}
+.bg-ts {
+  background-color: rgba(1, 122, 204, 0.3);
+  border: 1px solid #017acc;
+}
+.bg-postgre {
+  background-color: rgba(51, 103, 145, 0.3);
+  border: 1px solid #336791;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #e2e2e2;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #666666;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

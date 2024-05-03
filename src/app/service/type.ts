@@ -1,7 +1,6 @@
 export type DataProjects = {
   name: string;
   imageMain: string;
-  imagesList: string[];
   Links: string[];
   descriptionBrief: string;
   descriptionMain: string;

@@ -4,32 +4,24 @@ import { DialogContent } from "./ui/dialog";
 import { FaGithub } from "react-icons/fa";
 import { AiOutlineGlobal } from "react-icons/ai";
 import Link from "next/link";
+import { DataProjects } from "~/app/service/type";
 
-interface TecProps {
-  tec: string;
-  color: string;
-}
-
-interface ProjecPros {
-  name: string;
-  imageMain: string;
-  imagesList: string[];
-  Links: string[];
-  descriptionBrief: string;
-  descriptionMain: string;
-  technologies: Array<TecProps>;
-}
-
-export function DialogProjects(item: ProjecPros) {
+export function DialogProjects(item: DataProjects) {
   return (
-    <DialogContent className="max-w-[1200px] sm:w-[480px] p-0 border-0">
+    <DialogContent className="max-w-[1200px] sm:w-[420px] p-0 border-0">
       <div className="h-[800px] overflow-y-scroll scroll scroll-hidden">
-        <div className="bg-[#35098A] pt-14 flex justify-center">
-          <Image alt="name" src={item.imageMain} width={1100} height={900} />
+        <div className="bg-[#35098A] pt-14 flex justify-center shadow-md">
+          <Image
+            alt="name"
+            src={item.imageMain}
+            width={1100}
+            height={900}
+            className="rounded-t-md"
+          />
         </div>
         <div className="p-3">
           <div className="flex flex-col gap-8">
-            <h1 className="text-5xl font-semibold">{item.name}</h1>
+            <h1 className="text-7xl sm:text-5xl font-semibold">{item.name}</h1>
             <span>{item.descriptionBrief}</span>
 
             <div className="flex gap-5">
@@ -63,7 +55,7 @@ export function DialogProjects(item: ProjecPros) {
 
           <div className="flex flex-col gap-4">
             <h2 className="text-3xl font-semibold">Tecnologias utilizadas</h2>
-            <div className="flex gap-2">
+            <div className="flex flex-wrap gap-2">
               {item.technologies.map((technique, index) => (
                 <span
                   key={index}

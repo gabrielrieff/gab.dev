@@ -17,7 +17,7 @@ export function Projects() {
         transition={{ duration: 1 }}
         exit={{ opacity: 0 }}
       >
-        <h2 className="text-5xl sm:text-3xl p-2 font-bold bg-gradient-to-r from-[#A530ED] to-[#E6C8F1] bg-clip-text text-transparent">
+        <h2 className="text-5xl sm:text-3xl p-2 font-bold bg-gradient-to-r from-purple-800 to-purple-400 bg-clip-text text-transparent">
           Mais recentes projetos
         </h2>
       </motion.div>
@@ -40,7 +40,7 @@ export function Projects() {
             transition={{ duration: 0.5 }}
             key={index}
             className="w-[540px] h-[370px] xl:w-[490px] lg:w-[400px] lg:h-[320px] sm:w-[380px] sm:h-[250px]
-             bg-[#190C26] border-[1px] border-[#2f1747] text-white group 
+             bg-purple-950 border-[1px] text-white group 
             rounded-xl flex items-end justify-center relative"
           >
             <Image
@@ -53,7 +53,7 @@ export function Projects() {
             <div
               className="hidden group-hover:flex justify-between p-3 
               items-center absolute bg-gradient-to-r bottom-3
-            from-[#B941E4] to-[#7C11BD] w-[90%] h-20 rounded-2xl"
+              from-purple-800 to-purple-400 w-[90%] h-20 rounded-2xl"
             >
               <div className="flex flex-col gap-2 w-2/3">
                 <span className="text-xl font-semibold">{item.name}</span>
@@ -70,7 +70,7 @@ export function Projects() {
                   >
                     <GoArrowUpRight
                       size={50}
-                      className="hover:text-zinc-400 transition-[1s]"
+                      className="hover:text-black transition-[1s]"
                     />
                   </motion.button>
                 </DialogTrigger>
@@ -79,7 +79,6 @@ export function Projects() {
                   descriptionMain={item.descriptionMain}
                   imageMain={item.imageMain}
                   Links={item.Links!}
-                  imagesList={item.imagesList}
                   name={item.name}
                   technologies={item.technologies}
                 />
