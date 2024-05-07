@@ -13,11 +13,7 @@ export function DialogProjects(item: DataProjects) {
         <div className="bg-purple-800 pt-14 flex justify-center shadow-md">
           <Image
             alt="name"
-            src={
-              item.imageMain.startsWith("./")
-                ? `/${item.imageMain.slice(2)}`
-                : item.imageMain
-            }
+            src={item.imageMain}
             width={1100}
             height={900}
             className="rounded-t-md"
