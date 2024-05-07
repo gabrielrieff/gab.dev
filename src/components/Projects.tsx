@@ -45,7 +45,11 @@ export function Projects() {
           >
             <Image
               alt=""
-              src={item.imageMain}
+              src={
+                item.imageMain.startsWith("./")
+                  ? `/${item.imageMain.slice(2)}`
+                  : item.imageMain
+              }
               width={504}
               height={422}
               className="rounded-t-xl xl:w-[460px] lg:w-[380px] sm:w-[360px]"

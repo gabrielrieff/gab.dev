@@ -10,10 +10,14 @@ export function DialogProjects(item: DataProjects) {
   return (
     <DialogContent className="max-w-[1200px] sm:w-[420px] p-0 border-0">
       <div className="h-[800px] overflow-y-scroll scroll scroll-hidden">
-        <div className="bg-[#35098A] pt-14 flex justify-center shadow-md">
+        <div className="bg-purple-800 pt-14 flex justify-center shadow-md">
           <Image
             alt="name"
-            src={item.imageMain}
+            src={
+              item.imageMain.startsWith("./")
+                ? `/${item.imageMain.slice(2)}`
+                : item.imageMain
+            }
             width={1100}
             height={900}
             className="rounded-t-md"
@@ -28,14 +32,14 @@ export function DialogProjects(item: DataProjects) {
               <Link
                 href={item.Links[1]}
                 target="_blank"
-                className="bg-[#35098A] hover:bg-[#291a49] px-2 py-3 flex items-center justify-center gap-2 text-white rounded-md"
+                className="bg-purple-900 hover:bg-purple-950 px-2 py-3 flex items-center justify-center gap-2 text-white rounded-md"
               >
                 Acessar <AiOutlineGlobal size={20} />
               </Link>
               <Link
                 href={item.Links[0]}
                 target="_blank"
-                className="bg-[#35098A] hover:bg-[#291a49] px-2 py-3 flex items-center justify-center gap-2 text-white rounded-md"
+                className="bg-purple-900 hover:bg-purple-950 px-2 py-3 flex items-center justify-center gap-2 text-white rounded-md"
               >
                 Repositorio <FaGithub size={20} />
               </Link>

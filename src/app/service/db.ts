@@ -3,7 +3,7 @@ import { DataProjects } from "./type";
 export const data: DataProjects[] = [
   {
     name: "Image-schema",
-    imageMain: "/image-schema.png",
+    imageMain: "./image-schema.png",
     Links: [
       "https://github.com/gabrielrieff/imagens-schema",
       "https://imagens-schema.vercel.app/",
@@ -31,7 +31,7 @@ export const data: DataProjects[] = [
 
   {
     name: "dev-crud",
-    imageMain: "/dev-crud.png",
+    imageMain: "./dev-crud.png",
     Links: [
       "https://github.com/gabrielrieff/dev-crud-front",
       "https://dev-crud.vercel.app/",
