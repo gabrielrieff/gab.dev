@@ -18,7 +18,7 @@ export function Softskill() {
       >
         <Card>
           <CardHeader>
-            <PiBrainThin size={50} className="text-[#5d5cdc]" />
+            <PiBrainThin size={50} />
             <CardTitle>UI/UX Design</CardTitle>
           </CardHeader>
           <CardContent>
@@ -46,8 +46,9 @@ export function Softskill() {
           </CardHeader>
           <CardContent>
             <p>
-              Focado em aprender as melhores maneiras de solucionar problemas da
-              forma mais simples possivel, com bastante foco em perfomasse
+              Busco aumentar meus conhecimentos sobre as minhas tecnolgias de
+              desenvolvimento, para sempre resolver os problemas da melhor
+              maneira.
             </p>
           </CardContent>
         </Card>
@@ -64,14 +65,14 @@ export function Softskill() {
       >
         <Card>
           <CardHeader>
-            <GiSkills size={50} className="text-[#5d5cdc]" />
+            <GiSkills size={50} />
             <CardTitle>Habilidades</CardTitle>
           </CardHeader>
           <CardContent>
             <p>
-              Busca constante para melhora das minhas habilidades como
-              desenvolvedor, e como parte de uma equipe, melhoria de comunicação
-              e criação de códigos simples
+              Ótimo com trabalho em equipe, sempre buscando interagir e tirar
+              dúvidas. Proativo, buscando resolver problemas e adquirir mais
+              conhecimento.
             </p>
           </CardContent>
         </Card>
